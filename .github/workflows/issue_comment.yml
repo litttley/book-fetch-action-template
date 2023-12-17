@@ -25,6 +25,7 @@ jobs:
       
       - name: Run cli
         run: |
+          #!/bin/bash
 
         
   
