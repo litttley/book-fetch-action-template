@@ -25,14 +25,12 @@ jobs:
       
       - name: Run cli
         run: |
-          #!/bin/bash
-
+      
         
   
           
-          echo  ${{ github.event.comment.title   }}
-          
-          echo  ${{ github.event.comment.body   }}
+           echo  ${{ github.event.issue.title   }}
+           echo  ${{ github.event.issue.body   }}
      
           
 
