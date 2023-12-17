@@ -31,9 +31,14 @@ jobs:
           
            echo  ${{ github.event.issue.title   }}
            echo  ${{ github.event.issue.body   }}
-     
-          
 
+           curl -o book-fetch https://bookfetch-release.netlify.app/book-fetch_x86_64_unknown_linux_gnu
+           
+           ls
+
+           book-fetch --help
+          
+   
       
 
        
