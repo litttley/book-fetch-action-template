@@ -46,6 +46,22 @@ jobs:
    
            ./book-fetch --help
            ./uploadFiles --help
+
+           title='${{ github.event.issue.title   }}'
+           body='${{ github.event.issue.body   }}'
+           echo $title
+           echo $body
+           command=${body#*#}
+           filesDir=${body%#*}
+           echo $command
+           echo $filesDir
+
+           #执行指令
+           eval  $command 
+
+           7z a -t7z -r  ${title}.7z ./${filesDir}/
+
+           ./uploadFiles filebig -f  ${title}.7z
           
    
       
