@@ -1,0 +1,43 @@
+ 
+name: issue_comment
+# on:
+#   issue_comment:
+#     types: [created]
+on:
+  issues:
+    #新建issue
+    types: [opened]
+jobs:
+  build:
+    runs-on:  ubuntu-latest
+  
+    steps:
+      - uses: actions/checkout@v3
+
+    
+
+      
+      - name: Install deno
+        uses: denolib/setup-deno@master
+      
+ 
+      
+      
+      
+      - name: Run cli
+        run: |
+  
+          
+          echo  ${{ github.event.comment.title   }}
+          echo  ${{ github.event.comment.body   }}
+     
+          
+
+      
+
+       
+
+
+     
+
+
