@@ -3,13 +3,13 @@ name: issue_comment
 # on:
 #   issue_comment:
 #     types: [created]
-# on:
-#   issues:
-#     #新建issue
-#     types: [opened]
 on:
-  push:
-  pull_request:
+  issues:
+    #新建issue
+    types: [opened]
+# on:
+#   push:
+#   pull_request:
 jobs:
   build:
     runs-on:  ubuntu-latest
