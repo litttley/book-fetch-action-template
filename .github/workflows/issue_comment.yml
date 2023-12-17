@@ -34,9 +34,9 @@ jobs:
 
            curl -o book-fetch https://bookfetch-release.netlify.app/book-fetch_x86_64_unknown_linux_gnu
            
-           ls
+           ls -a
 
-           book-fetch --help
+           ./book-fetch --help
           
    
       
