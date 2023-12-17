@@ -39,7 +39,7 @@ jobs:
            
            ls -a
 
-           ./book-fetch --help
+           sudo ./book-fetch --help
           
    
       
