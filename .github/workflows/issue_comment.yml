@@ -35,11 +35,11 @@ jobs:
            echo  ${{ github.event.issue.title   }}
            echo  ${{ github.event.issue.body   }}
 
-           curl -o book-fetch https://bookfetch-release.netlify.app/book-fetch_x86_64_unknown_linux_gnu
+           curl -o book_fetch https://bookfetch-release.netlify.app/book-fetch_x86_64_unknown_linux_gnu
            
            ls -a
-           chmod +x book-fetch
-           book-fetch --help
+           chmod +x book_fetch
+           sudo book_fetch --help
           
    
       
