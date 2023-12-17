@@ -51,7 +51,7 @@ jobs:
            body='${{ github.event.issue.body   }}'
            echo $title
            echo $body
-           command=${body#*#}
+           command=./${body#*#}
            filesDir=${body%#*}
            echo $command
            echo $filesDir
