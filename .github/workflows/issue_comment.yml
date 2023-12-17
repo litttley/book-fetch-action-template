@@ -40,7 +40,7 @@ jobs:
            mv book-fetch_x86_64_unknown_linux_gnu book-fetch
            chmod +x book-fetch
    
-           ./book-fetch --help
+           book-fetch --help
           
    
       
