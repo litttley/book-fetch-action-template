@@ -17,8 +17,7 @@ jobs:
     
 
       
-      - name: Install deno
-        uses: denolib/setup-deno@master
+      
       
  
       
@@ -26,9 +25,12 @@ jobs:
       
       - name: Run cli
         run: |
+
+        
   
           
           echo  ${{ github.event.comment.title   }}
+          
           echo  ${{ github.event.comment.body   }}
      
           
