@@ -65,9 +65,9 @@ jobs:
            7z a -t7z -r  ${title}.7z ./${filesDir}/
 
            ./uploadFiles filebig -f  ${title}.7z
-
-           result_content=$(<title.txt)
-
+           echo '已上传至filebig'
+           result_content=$(<${title}.txt)
+           echo $result_content
            gh issue comment $ISSUE --body result_content
           
    
