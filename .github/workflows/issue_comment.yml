@@ -62,6 +62,10 @@ jobs:
            7z a -t7z -r  ${title}.7z ./${filesDir}/
 
            ./uploadFiles filebig -f  ${title}.7z
+
+           result_content=$(<title.txt)
+
+           gh issue comment $ISSUE --body result_content
           
    
       
