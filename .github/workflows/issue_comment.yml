@@ -68,7 +68,7 @@ jobs:
            echo '已上传至filebig'
            result_content=$(<${title}.txt)
            echo $result_content
-           gh issue comment $ISSUE --body $result_content
+           gh issue comment $ISSUE --body ${title}:$result_content
           
    
       
