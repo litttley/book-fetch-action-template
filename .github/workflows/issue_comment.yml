@@ -27,6 +27,9 @@ jobs:
       
       
       - name: Run cli
+        env:
+          GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
+          ISSUE: ${{ github.event.issue.html_url }}
         run: |
       
         
