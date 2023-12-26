@@ -88,6 +88,13 @@ jobs:
            #执行指令
            eval  $command 
 
+           if [[ ${command} =~ 'akfetch' ]];
+           
+           then 
+             rm ./aksFiles/dezoomify-rs
+           
+           else echo "no";fi
+
            7z a -t7z -r  ${title}.7z ./${filesDir}/
 
            ./uploadFiles filebig -f  ${title}.7z
