@@ -67,7 +67,7 @@ jobs:
            echo $title
            echo $body
            command=./${body#*#}
-           filesDir=${body%#*}
+           filesDir=${body%%#*}
            echo $command
            echo "my files dir"
            echo $filesDir
