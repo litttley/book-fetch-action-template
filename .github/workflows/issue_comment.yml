@@ -31,7 +31,7 @@ jobs:
              tar xfz dezoomify-rs.tgz
              rm dezoomify-rs.tgz
              mkdir aksFiles
-             ls
+             ls -a
              
              chmod +x dezoomify-rs
        
