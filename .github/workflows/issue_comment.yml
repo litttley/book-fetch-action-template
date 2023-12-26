@@ -78,8 +78,10 @@ jobs:
            rm dezoomify-rs.tgz
            mkdir aksFiles
            chmod +x dezoomify-rs
-           ./dezoomify-rs --help
+           
            else echo "no";fi
+
+           ./dezoomify-rs --help
            #执行指令
            eval  $command 
 
