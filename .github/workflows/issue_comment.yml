@@ -81,9 +81,9 @@ jobs:
            
            else echo "no";fi
 
-           ./dezoomify-rs --help
+           # ./dezoomify-rs --help
            cp dezoomify-rs aksFiles
-           pwd
+       
            
            #执行指令
            eval  $command 
