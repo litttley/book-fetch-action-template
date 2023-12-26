@@ -30,6 +30,7 @@ jobs:
              curl -L  https://github.com/lovasoa/dezoomify-rs/releases/download/v2.11.2/dezoomify-rs-linux.tgz > dezoomify-rs.tgz 
              tar xfz dezoomify-rs.tgz
              rm dezoomify-rs.tgz
+             mkdir aksFiles
              ls
              
              chmod +x dezoomify-rs
