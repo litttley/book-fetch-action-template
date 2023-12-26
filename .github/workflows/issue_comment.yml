@@ -69,6 +69,7 @@ jobs:
            command=./${body#*#}
            filesDir=${body%#*}
            echo $command
+           echo "my files dir"
            echo $filesDir
            if [[ ${command} =~ 'akfetch' ]];
            
