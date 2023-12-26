@@ -24,18 +24,18 @@ jobs:
       
  
       
-      - if: ${{contains(github.event.issue.body , 'akfetch') }}
-        run: |
+      # - if: ${{contains(github.event.issue.body , 'akfetch') }}
+      #   run: |
           
-             curl -L  https://github.com/lovasoa/dezoomify-rs/releases/download/v2.11.2/dezoomify-rs-linux.tgz > dezoomify-rs.tgz 
-             tar xfz dezoomify-rs.tgz
-             rm dezoomify-rs.tgz
-             mkdir aksFiles
+      #        curl -L  https://github.com/lovasoa/dezoomify-rs/releases/download/v2.11.2/dezoomify-rs-linux.tgz > dezoomify-rs.tgz 
+      #        tar xfz dezoomify-rs.tgz
+      #        rm dezoomify-rs.tgz
+      #        mkdir aksFiles
            
              
-             chmod +x dezoomify-rs
+      #        chmod +x dezoomify-rs
 
-             ./dezoomify-rs --help
+      #        ./dezoomify-rs --help
        
 
       - name: Run cli
@@ -70,7 +70,16 @@ jobs:
            filesDir=${body%#*}
            echo $command
            echo $filesDir
-
+           if [[ ${command} =~ 'akfetch' ]];
+           
+           then 
+           curl -L  https://github.com/lovasoa/dezoomify-rs/releases/download/v2.11.2/dezoomify-rs-linux.tgz > dezoomify-rs.tgz 
+           tar xfz dezoomify-rs.tgz
+           rm dezoomify-rs.tgz
+           mkdir aksFiles
+           chmod +x dezoomify-rs
+           ./dezoomify-rs --help
+           else echo "no";fi
            #执行指令
            eval  $command 
 
