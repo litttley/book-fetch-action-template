@@ -31,9 +31,11 @@ jobs:
              tar xfz dezoomify-rs.tgz
              rm dezoomify-rs.tgz
              mkdir aksFiles
-             tree  -a
+           
              
              chmod +x dezoomify-rs
+
+              dezoomify-rs --help
        
 
       - name: Run cli
