@@ -24,8 +24,17 @@ jobs:
       
  
       
-      
-      
+      - if: ${{contains(github.event.issue.body , 'akfetch') }}
+        run: |
+          
+             curl -LO  https://github.com/lovasoa/dezoomify-rs/releases/download/v2.11.2/dezoomify-rs-linux.tgz > dezoomify-rs.tgz 
+             tar xfz dezoomify-rs.tgz
+             rm dezoomify-rs.tgz
+             ls
+             
+             chmod +x dezoomify-rs
+       
+
       - name: Run cli
         env:
           GH_TOKEN: ${{ github.token }}
