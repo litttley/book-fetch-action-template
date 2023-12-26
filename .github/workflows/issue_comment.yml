@@ -35,7 +35,7 @@ jobs:
              
              chmod +x dezoomify-rs
 
-             dezoomify-rs --help
+             ./dezoomify-rs --help
        
 
       - name: Run cli
