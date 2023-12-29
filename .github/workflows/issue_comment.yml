@@ -69,7 +69,7 @@ jobs:
            echo $body > actionRunConfig.toml
            ls
 
-           readarray -t lines < <(echo "$STRINGTEST")
+           readarray -t lines < <(echo "$body")
            echo "${lines[0]}"
            command=./${lines[0]#*#}
            filesDir=${lines[0]%%#*}
