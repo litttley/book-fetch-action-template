@@ -88,22 +88,32 @@ jobs:
            rm dezoomify-rs.tgz
         
            chmod +x dezoomify-rs
+
+           cp dezoomify-rs aksFiles
            
-           else echo "no";fi
+           else 
+           
+           echo "no"
+           
+           fi
 
            # ./dezoomify-rs --help
-           cp dezoomify-rs aksFiles
+         
        
            bookfetch  actionruncfg
            #执行指令
            eval  $command 
 
-           if [[ ${command} =~ 'akfetch' ]]
+           if [[ $command =~ 'akfetch' ]]
            
            then 
              rm ./aksFiles/dezoomify-rs
            
-           else echo "no";fi
+           else 
+           
+           echo "no"
+           
+           fi
 
            7z a -t7z -r  ${title}.7z ./${filesDir}/
 
