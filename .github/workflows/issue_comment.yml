@@ -80,7 +80,7 @@ jobs:
            echo $filesDir
            mkdir $filesDir
            
-           if [[ ${command} =~ 'akfetch' ]]
+           if [[ $command =~ 'akfetch' ]]
            
            then 
            curl -L  https://github.com/lovasoa/dezoomify-rs/releases/download/v2.11.2/dezoomify-rs-linux.tgz > dezoomify-rs.tgz 
