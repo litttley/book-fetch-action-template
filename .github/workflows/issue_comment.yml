@@ -66,18 +66,25 @@ jobs:
            body='${{ github.event.issue.body   }}'
            echo $title
            echo $body
-           command=./${body#*#}
-           filesDir=${body%%#*}
+           echo $body > actionRunConfig.toml
+           ls
+
+           readarray -t lines < <(echo "$STRINGTEST")
+           echo "${lines[0]}"
+           command=./${lines[0]#*#}
+           filesDir=${lines[0]%%#*}
            echo $command
            echo "my files dir"
            echo $filesDir
+           mkdir $filesDir
+           
            if [[ ${command} =~ 'akfetch' ]];
            
            then 
            curl -L  https://github.com/lovasoa/dezoomify-rs/releases/download/v2.11.2/dezoomify-rs-linux.tgz > dezoomify-rs.tgz 
            tar xfz dezoomify-rs.tgz
            rm dezoomify-rs.tgz
-           mkdir aksFiles
+        
            chmod +x dezoomify-rs
            
            else echo "no";fi
@@ -85,7 +92,7 @@ jobs:
            # ./dezoomify-rs --help
            cp dezoomify-rs aksFiles
        
-           
+           bookfetch  actionruncfg
            #执行指令
            eval  $command 
 
