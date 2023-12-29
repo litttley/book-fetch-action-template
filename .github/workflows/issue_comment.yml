@@ -71,12 +71,14 @@ jobs:
 
            readarray -t lines < <(echo "$body")
            echo "${lines[0]}"
-           command=./${lines[0]#*#}
-           filesDir=${lines[0]%%#*}
+           command=./${lines[1]#*#}
+           filesDir=${lines[0]#*#}
+           # command=./${lines[0]#*#}
+           # filesDir=${lines[0]%%#*}
            echo $command
            echo "my files dir"
            echo $filesDir
-           mkdir $filesDir
+           # mkdir $filesDir
            
            if [[ ${command} =~ 'akfetch' ]];
            
