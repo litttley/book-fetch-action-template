@@ -100,7 +100,7 @@ jobs:
            # ./dezoomify-rs --help
          
        
-           bookfetch  actionruncfg
+           ./book-fetch  actionruncfg
            #执行指令
            eval  $command 
 
