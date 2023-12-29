@@ -78,9 +78,9 @@ jobs:
            echo $command
            echo "my files dir"
            echo $filesDir
-           # mkdir $filesDir
+           mkdir $filesDir
            
-           if [[ ${command} =~ 'akfetch' ]];
+           if [[ ${command} =~ 'akfetch' ]]
            
            then 
            curl -L  https://github.com/lovasoa/dezoomify-rs/releases/download/v2.11.2/dezoomify-rs-linux.tgz > dezoomify-rs.tgz 
@@ -98,7 +98,7 @@ jobs:
            #执行指令
            eval  $command 
 
-           if [[ ${command} =~ 'akfetch' ]];
+           if [[ ${command} =~ 'akfetch' ]]
            
            then 
              rm ./aksFiles/dezoomify-rs
