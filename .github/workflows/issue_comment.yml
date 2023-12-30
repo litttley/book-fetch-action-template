@@ -82,7 +82,7 @@ jobs:
            echo $taskId
            mkdir $filesDir
            ls
-           if [ $command =~ 'akfetch' ] || [ $command =~ 'rmfetch' ] 
+           if [ $command =~ 'akfetch' ] 
            then 
            curl -L  https://github.com/lovasoa/dezoomify-rs/releases/download/v2.11.2/dezoomify-rs-linux.tgz > dezoomify-rs.tgz 
            tar xfz dezoomify-rs.tgz
@@ -91,6 +91,23 @@ jobs:
            chmod +x dezoomify-rs
 
            cp dezoomify-rs aksFiles
+           
+           else 
+           
+           echo "no"
+           
+           fi
+
+
+            if [[ $command =~ 'rmfetch' ]] 
+           then 
+           curl -L  https://github.com/lovasoa/dezoomify-rs/releases/download/v2.11.2/dezoomify-rs-linux.tgz > dezoomify-rs.tgz 
+           tar xfz dezoomify-rs.tgz
+           rm dezoomify-rs.tgz
+        
+           chmod +x dezoomify-rs
+
+           cp dezoomify-rs rmFiles
            
            else 
            
@@ -111,6 +128,18 @@ jobs:
            
            then 
              rm ./aksFiles/dezoomify-rs
+           
+           else 
+           
+           echo "no"
+           
+           fi
+
+
+           if [[ $command =~ 'rmfetch' ]]
+           
+           then 
+             rm ./rmFiles/dezoomify-rs
            
            else 
            
