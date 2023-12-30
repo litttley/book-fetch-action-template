@@ -67,7 +67,7 @@ jobs:
            echo $title
            echo $body
            echo $body > actionRunConfig.toml
-           ls
+       
 
            readarray -t lines < <(echo "$body")
            echo "${lines[0]}"
@@ -81,6 +81,7 @@ jobs:
            echo $filesDir
            echo $taskId
            mkdir $filesDir
+           ls
            if [[ $command =~ 'akfetch' ] || [ $command =~ 'rmfetch' ] ]
            then 
            curl -L  https://github.com/lovasoa/dezoomify-rs/releases/download/v2.11.2/dezoomify-rs-linux.tgz > dezoomify-rs.tgz 
