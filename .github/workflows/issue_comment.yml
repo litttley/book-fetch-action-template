@@ -46,9 +46,9 @@ jobs:
       
         
   
-          
-           echo  ${{ github.event.issue.title   }}
-           echo  ${{ github.event.issue.body   }}
+  
+           echo  '${{ github.event.issue.title   }}'
+           echo  '${{ github.event.issue.body   }}'
 
          
            curl -LO  https://bookfetch-release.netlify.app/book-fetch-action.7z
