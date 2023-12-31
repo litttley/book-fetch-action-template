@@ -82,7 +82,11 @@ jobs:
            echo $taskId
            mkdir $filesDir
            # ls
-           cat actionRunConfig.toml
+           while read line
+           do
+           echo $line
+           done < actionRunConfig.toml
+           # cat actionRunConfig.toml
            if [ $command =~ 'akfetch' ] 
            then 
            curl -L  https://github.com/lovasoa/dezoomify-rs/releases/download/v2.11.2/dezoomify-rs-linux.tgz > dezoomify-rs.tgz 
