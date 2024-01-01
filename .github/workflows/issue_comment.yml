@@ -168,7 +168,7 @@ jobs:
            
            fi
 
-           if [[ $command =~ 'rmfetch' ]]
+           if [[ $command =~ 'lofetch' ]]
            
            then 
              rm ./loFiles/dezoomify-rs
