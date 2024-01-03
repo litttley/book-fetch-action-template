@@ -136,6 +136,23 @@ jobs:
            
            fi
 
+
+            if [[ $command =~ 'difetch' ]] 
+           then 
+           curl -L  https://github.com/lovasoa/dezoomify-rs/releases/download/v2.11.2/dezoomify-rs-linux.tgz > dezoomify-rs.tgz 
+           tar xfz dezoomify-rs.tgz
+           rm dezoomify-rs.tgz
+        
+           chmod +x dezoomify-rs
+
+           cp dezoomify-rs diFiles
+           
+           else 
+           
+           echo "no difetch"
+           
+           fi
+
            
 
            # ./dezoomify-rs --help
@@ -176,6 +193,17 @@ jobs:
            else 
            
            echo "no"
+           
+           fi
+
+            if [[ $command =~ 'difetch' ]]
+           
+           then 
+             rm ./loFiles/dezoomify-rs
+           
+           else 
+           
+           echo "no difetch"
            
            fi
 
