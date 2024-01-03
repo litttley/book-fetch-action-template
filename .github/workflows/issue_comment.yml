@@ -153,6 +153,22 @@ jobs:
            
            fi
 
+           if [[ $command =~ 'harfetch' ]] 
+           then 
+           curl -L  https://github.com/lovasoa/dezoomify-rs/releases/download/v2.11.2/dezoomify-rs-linux.tgz > dezoomify-rs.tgz 
+           tar xfz dezoomify-rs.tgz
+           rm dezoomify-rs.tgz
+        
+           chmod +x dezoomify-rs
+
+           cp dezoomify-rs harFiles
+           
+           else 
+           
+           echo "no harfetch"
+           
+           fi
+
            
 
            # ./dezoomify-rs --help
@@ -200,6 +216,17 @@ jobs:
            
            then 
              rm ./diFiles/dezoomify-rs
+           
+           else 
+           
+           echo "no difetch"
+           
+           fi
+
+           if [[ $command =~ 'harfetch' ]]
+           
+           then 
+             rm ./harFiles/dezoomify-rs
            
            else 
            
