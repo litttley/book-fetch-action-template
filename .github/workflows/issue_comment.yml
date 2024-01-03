@@ -199,7 +199,7 @@ jobs:
             if [[ $command =~ 'difetch' ]]
            
            then 
-             rm ./loFiles/dezoomify-rs
+             rm ./diFiles/dezoomify-rs
            
            else 
            
