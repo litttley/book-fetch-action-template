@@ -185,6 +185,22 @@ jobs:
            
            fi
 
+            if [[ $command =~ 'bofetch' ]] 
+           then 
+           curl -L  https://github.com/lovasoa/dezoomify-rs/releases/download/v2.11.2/dezoomify-rs-linux.tgz > dezoomify-rs.tgz 
+           tar xfz dezoomify-rs.tgz
+           rm dezoomify-rs.tgz
+        
+           chmod +x dezoomify-rs
+
+           cp dezoomify-rs  boFiles
+           
+           else 
+           
+           echo "no bofetch"
+           
+           fi
+
            
 
            # ./dezoomify-rs --help
@@ -258,6 +274,17 @@ jobs:
            else 
            
            echo "no prfetch"
+           
+           fi
+
+           if [[ $command =~ 'bofetch' ]]
+           
+           then 
+             rm ./boFiles/dezoomify-rs
+           
+           else 
+           
+           echo "no bofetch"
            
            fi
 
