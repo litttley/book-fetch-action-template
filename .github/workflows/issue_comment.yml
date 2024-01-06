@@ -87,6 +87,22 @@ jobs:
            echo $line
            done < actionRunConfig.toml
            # cat actionRunConfig.toml
+            if [ $command =~ 'osfetch' ] 
+           then 
+           curl -L  https://github.com/lovasoa/dezoomify-rs/releases/download/v2.11.2/dezoomify-rs-linux.tgz > dezoomify-rs.tgz 
+           tar xfz dezoomify-rs.tgz
+           rm dezoomify-rs.tgz
+        
+           chmod +x dezoomify-rs
+
+           cp dezoomify-rs osFiles
+           
+           else 
+           
+           echo "no osfetch"
+           
+           fi
+           
            if [ $command =~ 'akfetch' ] 
            then 
            curl -L  https://github.com/lovasoa/dezoomify-rs/releases/download/v2.11.2/dezoomify-rs-linux.tgz > dezoomify-rs.tgz 
@@ -99,7 +115,7 @@ jobs:
            
            else 
            
-           echo "no"
+           echo "no akfetch"
            
            fi
 
@@ -116,7 +132,7 @@ jobs:
            
            else 
            
-           echo "no"
+           echo "no rmfetch"
            
            fi
            
@@ -132,7 +148,7 @@ jobs:
            
            else 
            
-           echo "no"
+           echo "no lofetch"
            
            fi
 
@@ -209,6 +225,17 @@ jobs:
            ./book-fetch  actionruncfg
            #执行指令
            eval  $command 
+
+           if [[ $command =~ 'osfetch' ]]
+           
+           then 
+             rm ./osFiles/dezoomify-rs
+           
+           else 
+           
+           echo "no osfetch"
+           
+           fi
 
            if [[ $command =~ 'akfetch' ]]
            
