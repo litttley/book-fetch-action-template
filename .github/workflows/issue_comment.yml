@@ -95,7 +95,7 @@ jobs:
         
            chmod +x dezoomify-rs
 
-           cp dezoomify-rs osFiles
+           # cp dezoomify-rs osFiles
            
            else 
            
@@ -226,16 +226,16 @@ jobs:
            #执行指令
            eval  $command 
 
-           if [[ $command =~ 'osfetch' ]]
+           # if [[ $command =~ 'osfetch' ]]
            
-           then 
-             rm ./osFiles/dezoomify-rs
+           # then 
+           #   rm ./osFiles/dezoomify-rs
            
-           else 
+           # else 
            
-           echo "no osfetch"
+           # echo "no osfetch"
            
-           fi
+           # fi
 
            if [[ $command =~ 'akfetch' ]]
            
