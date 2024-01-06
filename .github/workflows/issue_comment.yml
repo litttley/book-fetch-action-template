@@ -111,7 +111,7 @@ jobs:
         
            chmod +x dezoomify-rs
 
-           cp dezoomify-rs aksFiles
+           # cp dezoomify-rs aksFiles
            
            else 
            
@@ -128,7 +128,7 @@ jobs:
         
            chmod +x dezoomify-rs
 
-           cp dezoomify-rs rmFiles
+           # cp dezoomify-rs rmFiles
            
            else 
            
@@ -144,7 +144,7 @@ jobs:
         
            chmod +x dezoomify-rs
 
-           cp dezoomify-rs loFiles
+           # cp dezoomify-rs loFiles
            
            else 
            
@@ -161,7 +161,7 @@ jobs:
         
            chmod +x dezoomify-rs
 
-           cp dezoomify-rs diFiles
+           # cp dezoomify-rs diFiles
            
            else 
            
@@ -177,7 +177,7 @@ jobs:
         
            chmod +x dezoomify-rs
 
-           cp dezoomify-rs harFiles
+           # cp dezoomify-rs harFiles
            
            else 
            
@@ -193,7 +193,7 @@ jobs:
         
            chmod +x dezoomify-rs
 
-           cp dezoomify-rs  prFiles
+           # cp dezoomify-rs  prFiles
            
            else 
            
@@ -209,7 +209,7 @@ jobs:
         
            chmod +x dezoomify-rs
 
-           cp dezoomify-rs  boFiles
+           # cp dezoomify-rs  boFiles
            
            else 
            
@@ -225,95 +225,6 @@ jobs:
            ./book-fetch  actionruncfg
            #执行指令
            eval  $command 
-
-           # if [[ $command =~ 'osfetch' ]]
-           
-           # then 
-           #   rm ./osFiles/dezoomify-rs
-           
-           # else 
-           
-           # echo "no osfetch"
-           
-           # fi
-
-           if [[ $command =~ 'akfetch' ]]
-           
-           then 
-             rm ./aksFiles/dezoomify-rs
-           
-           else 
-           
-           echo "no"
-           
-           fi
-
-
-           if [[ $command =~ 'rmfetch' ]]
-           
-           then 
-             rm ./rmFiles/dezoomify-rs
-           
-           else 
-           
-           echo "no"
-           
-           fi
-
-           if [[ $command =~ 'lofetch' ]]
-           
-           then 
-             rm ./loFiles/dezoomify-rs
-           
-           else 
-           
-           echo "no"
-           
-           fi
-
-            if [[ $command =~ 'difetch' ]]
-           
-           then 
-             rm ./diFiles/dezoomify-rs
-           
-           else 
-           
-           echo "no difetch"
-           
-           fi
-
-           if [[ $command =~ 'harfetch' ]]
-           
-           then 
-             rm ./harFiles/dezoomify-rs
-           
-           else 
-           
-           echo "no difetch"
-           
-           fi
-
-            if [[ $command =~ 'prfetch' ]]
-           
-           then 
-             rm ./prFiles/dezoomify-rs
-           
-           else 
-           
-           echo "no prfetch"
-           
-           fi
-
-           if [[ $command =~ 'bofetch' ]]
-           
-           then 
-             rm ./boFiles/dezoomify-rs
-           
-           else 
-           
-           echo "no bofetch"
-           
-           fi
 
            7z a -t7z -r  ${title}.7z ./${filesDir}/
 
